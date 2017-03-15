@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="howaboutlunch">
+
+<head>
+    <meta charset="utf-8">
+    <title>How About Lunch?</title>
+    <base href="/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <main>
+
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ui-sref="polls">Make a Poll!</a></li>
+                    <li><a ui-sref="login">Login</a></li>
+                    <li><a ui-sref="signup">Sign Up!</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ui-view></ui-view>
+
+
+
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 How About Lunch?
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.js" charset="utf-8"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js" charset="utf-8"></script>
+    <script src="app/home/home.component.js" charset="utf-8"></script>
+    <script src="app/home/home.controller.js" charset="utf-8"></script>
+    <script src="app/polls/polls.controller.js"></script>
+    <script src="app/polls/polls.component.js"></script>
+    <script src="app/login/login.component.js"></script>
+    <script src="app/login/login.controller.js"></script>
+    <script src="app/signup/signup.component.js"></script>
+    <script src="app/signup/signup.controller.js"></script>
+</body>
+
+</html>
