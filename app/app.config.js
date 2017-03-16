@@ -28,6 +28,11 @@
                 url: '/signup',
                 component: 'signup'
             })
+            .state({
+                name: 'placeList',
+                url: '/placeList',
+                component: 'placeList'
+            })
 
 
         $urlRouterProvider.otherwise('/')
