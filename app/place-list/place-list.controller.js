@@ -13,22 +13,10 @@
 
             vm.$onInit = function() {
               console.log('WHAAAAAT');
-                $http.get('https://howaboutlunch.herokuapp.com/api/v1/places')
+                $http.get('https://howaboutlunch.herokuapp.com/api/v1/places?latitude=39.7639175&longitude=-105.0178755&term=food')
                     .then(function(response) {
-                        console.log(response);
-                        vm.places = [{
-                            name: response.name,
-                            type: response.types,
-                            address: response.vicinity,
-                            location: response.geometry.location,
-                            price_level: response.price_level,
-                            rating: response.rating,
-                            open_now: response.opening_hours.open_now,
-                            placeId: response.place_id
-
-                        }]
-
-
+                      vm.places = response.data.businesses
+                      console.log(response.data.businesses);
                     })
             }
         }

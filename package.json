@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mycroquet/howaboutlunch-Frontend/issues"
   },
-  "homepage": "https://github.com/mycroquet/howaboutlunch-Frontend#readme"
+  "homepage": "https://github.com/mycroquet/howaboutlunch-Frontend#readme",
+  "dependencies": {
+    "ramda": "^0.23.0"
+  }
 }

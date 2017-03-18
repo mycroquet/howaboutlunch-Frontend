@@ -1,6 +1,45 @@
 <h1>Step One: Choose Your Places!</h1>
 
-<div ng-repeat="places in $ctrl.placeList">
+<div ng-repeat="place in $ctrl.places">
+    <div class="container">
+
+
+        <!-- <img src="{{place.image_url}}" class="circle responsive-img rest-img">
+        <h4>{{place.name}}</h4>
+
+        <details closed>
+            <p>{{place.location.display_address}}</p>
+            <p>{{place.phone}}</p>
+            <p>Rating: {{place.rating}}</p>
+            <p><a href="{{place.url}}">Visit Website</a></p>
+            <p>{{place.price}}</p>
+            <p>Closed? {{place.is_closed}}</p>
+            <p>{{place.categories}}</p>
+            <p>{{place.distance}} meters</p>
+        </details> -->
+
+
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{{place.image_url}}">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{place.name}}<i class="material-icons right">more_vert</i></span>
+                <p><a href="{{place.url}}">Visit Site</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{place.name}}<i class="material-icons right">close</i></span>
+                <p>{{place.location.display_address}}</p>
+                <p><a href="tel:{{place.phone}}">Call Now</a></p>
+                <p>Rating: {{place.rating}}</p>
+                <p>{{place.price}}</p>
+                <p>{{place.distance}} meters</p>
+            </div>
+        </div>
+
+    </div>
+
+
 
 </div>
 

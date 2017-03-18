@@ -12,3 +12,18 @@ main {
 a {
     color: #00B7FF;
 }
+
+.rest-img {
+  display: inline-block;
+  width: 10vw;
+}
+
+img {
+  object-fit: cover;
+  width:230px;
+  height:230px;
+}
+
+details {
+  display: inline-block;
+}
