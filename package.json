@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mycroquet/howaboutlunch-Frontend#readme",
   "dependencies": {
+    "angular-ui-sortable": "^0.17.0",
     "ramda": "^0.23.0"
   }
 }

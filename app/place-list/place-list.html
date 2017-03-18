@@ -3,7 +3,7 @@
   <a ui-sref="polls" class="waves-effect waves-light btn">Create Poll</a>
 </header>
 
-<div ng-repeat="place in $ctrl.places">
+<div ui-sortable ng-model="places" ng-repeat="place in $ctrl.places">
   <div class="places-polls">
     <div class="places-container">
         <div class="card red darken-4">

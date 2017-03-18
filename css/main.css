@@ -104,3 +104,7 @@ header {
   display: flex;
   justify-content: center;
 }
+
+.signup {
+  width: 50vw;
+}
