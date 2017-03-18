@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>How About Lunch?</title>
+    <title>How 'Bout Lunch?</title>
     <base href="/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,12 +12,10 @@
 
 <body>
     <main>
-
         <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+            <div class="nav-wrapper red darken-4">
+                <a ui-sref="home" class="brand-logo">How 'Bout Lunch</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a ui-sref="placeList">Make a Poll!</a></li>
                     <li><a ui-sref="login">Login</a></li>
                     <li><a ui-sref="signup">Sign Up!</a></li>
                 </ul>
@@ -26,16 +24,10 @@
 
         <ui-view></ui-view>
 
-
-
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer red darken-4">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
@@ -60,7 +52,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.js" charset="utf-8"></script>
-
+    <script type="text/javascript" src="modules/directives/sortable/src/sortable.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js" charset="utf-8"></script>
     <script src="app/home/home.component.js" charset="utf-8"></script>

@@ -2,6 +2,6 @@
   'use strict'
 
   angular
-    .module('howaboutlunch', ['ui.router'])
+    .module('howaboutlunch', ['ui.router', 'ui.sortable'])
 
 })();

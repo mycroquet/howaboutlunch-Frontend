@@ -9,21 +9,98 @@ main {
     flex: 1 0 auto;
 }
 
+.nav-wrapper {
+  padding: 0 2em;
+}
+
+.opaque-bg {
+  color: #fff;
+  background-color: rgba(183, 28, 28, 0.65) !important;
+  opacity: .7;
+}
+
+.places-polls {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.places-container {
+  display: flex;
+  justify-content: flex-start;
+    width: 40vw;
+    border-right: 2px solid #000;
+    padding-right: 5em;
+    margin: 0 5em;
+}
+
+.poll-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 40vw;
+}
+
 a {
     color: #00B7FF;
 }
 
-.rest-img {
-  display: inline-block;
-  width: 10vw;
+.card-img {
+    object-fit: cover;
+    height: 250px;
 }
 
-img {
-  object-fit: cover;
-  width:230px;
-  height:230px;
+.hero {
+  width: 115vw;
 }
 
-details {
-  display: inline-block;
+.home-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.poll-button:hover {
+    background-color: rgba(255, 110, 64, 0.65) !important;
+}
+
+.valign-wrapper {
+    display: block !important;
+    display: -ms-flexbox;
+    /* display: flex; */
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hero-block {
+    padding-top: 10%;
+}
+
+.instruction {
+  width: 20vw;
+}
+
+.parallax img {
+  display: block;
+  opacity: .7;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 75vh;
+  background-size: cover;
+  background: rgba(235, 129, 4, 0.2);
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
 }
