@@ -1,41 +1,43 @@
 <div class="container">
     <h4>Please enter required information</h4>
     <div class="row signup">
-        <form class="col s12">
+        <form class="col s12" ng-submit="$ctrl.formSubmit()">
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
+                    <input id="first_name" type="text" class="form-control" ng-model="$ctrl.user.first_name" class="validate">
+                    <label for="first_name">First Name</label>
                 </div>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Last Name</label>
+                    <input id="last_name" type="text" class="form-control" ng-model="$ctrl.user.last_name" class="validate">
+                    <label for="last_name">Last Name</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">email</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Email</label>
+                    <input id="email" type="email" class="form-control" ng-model="$ctrl.user.email" class="validate">
+                    <label for="email">Email</label>
                 </div>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">business</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Company (optional)</label>
+                    <input id="company" type="text" class="form-control" ng-model="$ctrl.user.company" class="validate">
+                    <label for="company">Company (optional)</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6">
                     <i class="material-icons prefix">lock</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Create Password</label>
+                    <input id="password" type="password" class="form-control" ng-model="$ctrl.user.password" class="validate">
+                    <label for="password">Create Password</label>
                 </div>
             </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action">Create Account
+            <button class="btn waves-effect waves-light" type="submit" id="submit" ng-click="$ctrl.signupController()">Create Account
     <i class="material-icons right">send</i>
   </button>
+            <div class="error-container">
+            </div>
         </form>
     </div>
 

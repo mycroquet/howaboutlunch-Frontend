@@ -14,9 +14,9 @@
                 component: 'home'
             })
             .state({
-                name: 'polls',
-                url: '/buildpoll',
-                component: 'polls'
+                name: 'profile',
+                url: '/profile',
+                component: 'profile'
             })
             .state({
                 name: 'login',

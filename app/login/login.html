@@ -1,20 +1,20 @@
 <div class="container">
   <h4>Please enter your Log In Info</h4>
-  <div class="row">
-    <form class="col s12">
+  <div class="row login">
+    <form novalidate class="col s12" ng-submit="$ctrl.formSubmit()">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
+          <input id="icon_prefix" type="email" ng-model="$ctrl.user.email" class="validate">
           <label for="icon_prefix">Email</label>
         </div>
         <div class="input-field col s6">
           <i class="material-icons prefix">lock</i>
-          <input id="icon_prefix" type="text" class="validate">
+          <input id="icon_prefix" type="password" ng-model="$ctrl.user.password" class="validate">
           <label for="icon_prefix">Password</label>
         </div>
       </div>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Log In
+      <button class="btn waves-effect waves-light" type="submit" id="submit">Log In
     <i class="material-icons right">send</i>
   </button>
     </form>
