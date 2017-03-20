@@ -19,7 +19,8 @@
                       console.log(response.data.businesses);
                     })
                     vm.options = {
-                      'ui-floating': true
+                      'ui-floating': true,
+                      connectWith: '.polls-container'
                     }
             }
         }

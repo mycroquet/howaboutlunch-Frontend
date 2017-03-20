@@ -12,10 +12,10 @@
             const vm = this
 
             vm.$onInit = function() {
-                $http.get('http://localhost:4000/users/')
+                $http.get('http://localhost:4000/users/profile')
                     .then(function(response) {
-                      vm.user = response
-                      console.log(response);
+                      vm.users = response.data.userInfo[0]
+                      console.log(response.data.userInfo[0]);
                     })
             }
         }

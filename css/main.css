@@ -21,21 +21,22 @@ main {
 
 .places-polls {
   display: flex;
-  flex-direction: row;
   width: 100vw;
 }
 
 .places-container {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 40vw;
     border-right: 2px solid #000;
     padding-right: 5em;
     margin: 0 5em;
 }
 
-.poll-container {
+.polls-container {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   width: 40vw;
 }
