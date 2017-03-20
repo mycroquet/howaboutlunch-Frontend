@@ -9,7 +9,7 @@
     signupController.$inject = ['$http']
 
     function signupController($http) {
-        const ENDPOINT = 'http://localhost:4000/signup'
+        const ENDPOINT = 'http://localhost:4000/users/signup'
         const vm = this
 
         vm.$onInit = function() {
@@ -32,14 +32,16 @@
                   company: vm.user.company
             }
 
-            if (signupInfo.password.length < 5) {
+            if (!user.password || user.password.length < 5) {
                 alertError();
             } else {
                 $http.post(ENDPOINT, signupInfo)
                     .then(function(result) {
                         console.log(signupInfo);
                         window.userId = result.userId
+
                         let id = result.userId;
+
                         window.location = `/users/${id}`;
                         $state.go('profile')
                     }).catch(function(error) {

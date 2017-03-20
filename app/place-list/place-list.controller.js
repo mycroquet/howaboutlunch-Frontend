@@ -18,6 +18,9 @@
                       vm.places = response.data.businesses
                       console.log(response.data.businesses);
                     })
+                    vm.options = {
+                      'ui-floating': true
+                    }
             }
         }
 

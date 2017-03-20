@@ -17,10 +17,10 @@
     </div>
 </div> -->
 
-<div ui-sortable ng-model="$ctrl.places" ng-repeat="place in $ctrl.places">
-    <div class="places-polls">
+<div>
+    <div ng-model="$ctrl.places" class="places-polls" ng-repeat="place in $ctrl.places">
         <div class="places-container">
-            <div class="card red darken-4">
+            <div ui-sortable="$ctrl.options" class="card red darken-4">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator card-img" src="{{place.image_url}}">
                 </div>
