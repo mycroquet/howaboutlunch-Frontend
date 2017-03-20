@@ -21,21 +21,22 @@ main {
 
 .places-polls {
   display: flex;
+  flex-direction: row;
   width: 100vw;
 }
 
 .places-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: inline-block;
+    float: left;
     width: 40vw;
-    border-right: 2px solid #000;
     padding-right: 5em;
     margin: 0 5em;
 }
 
 .polls-container {
-  display: flex;
+  display: inline-block;
+  float:right;
+  height: 100%;
   flex-direction: column;
   justify-content: flex-end;
   width: 40vw;
@@ -109,9 +110,18 @@ h2 span {
   margin-top: 3em;
 }
 
-header {
-  display: flex;
-  justify-content: center;
+.select-rest {
+  display: inline-block;
+  float: left;
+  width: 45vw;
+  text-align: center;
+}
+
+.poll-rest {
+  display: inline-block;
+  float: right;
+  width: 40vw;
+  text-align: center;
 }
 
 .signup {
