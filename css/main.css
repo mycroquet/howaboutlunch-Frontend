@@ -3,14 +3,25 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #E7E7D5;
 }
 
 main {
     flex: 1 0 auto;
 }
 
+nav {
+  background-color: #9C3922 !important;
+  height: 13vh !important;
+}
+
 .nav-wrapper {
   padding: 0 2em;
+}
+
+.logo {
+  width: 75px;
+  margin-top: .2em;
 }
 
 .opaque-bg {
@@ -35,15 +46,38 @@ main {
 
 .polls-container {
   display: inline-block;
-  float:right;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
+  float: right;
   width: 40vw;
+  padding-left: 5em;
+  margin: 0 5em;
+}
+
+.dropzone {
+  background-color: pink;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  float: right;
+  padding: 14px;
+  border: 2px dashed grey
+  color: grey;
+}
+
+.dropzone:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.noFields {
+  padding: 14px;
+  border: 2px dashed grey;
 }
 
 a {
-    color: #00B7FF;
+    color: #fff;
 }
 
 .card-img {
@@ -62,8 +96,12 @@ a {
   width: 100vw;
 }
 
+.poll-button {
+  background-color: #C6720B;
+}
+
 .poll-button:hover {
-    background-color: rgba(255, 110, 64, 0.8) !important;
+    background-color: rgba(255, 110, 64, 0.8);
 }
 
 .valign-wrapper {
@@ -124,10 +162,18 @@ h2 span {
   text-align: center;
 }
 
+.card {
+  background-color: #968F76 !important;
+}
+
 .signup {
   width: 50vw;
 }
 
 .login {
   width: 50vw;
+}
+
+footer {
+  background-color: #9C3922 !important;
 }

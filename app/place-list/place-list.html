@@ -16,14 +16,41 @@
     <h2>Select Your Restaurants</h2>
 </header>
 <header class="poll-rest">
-  <h2>Drag selections here</h2>
+    <h2>Drag selections here</h2>
 </header>
+<div class="polls-container">
+    <div ng-show="dragging" class="dropzone" ui-sortable="dropzone" ng-model="dropzoneFields">
+        <p>This is text</p>
 
+    </div>
+    <div ng-repeat="item in dropzoneFields track by $index">
+      <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator card-img" src="{{item.image_url}}">
+          </div>
+          <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{item.name}}<i class="material-icons right">more_vert</i></span>
+              <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
+          </div>
+          <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{item.name}}<i class="material-icons right">close</i></span>
+              <p>{{item.location.display_address}}</p>
+              <p><a href="tel:{{item.phone}}">Call Now</a></p>
+              <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
+              <p>Rating: {{item.rating}}</p>
+              <p>{{item.price}}</p>
+              <p>{{item.distance}} meters</p>
+          </div>
+      </div>
+    </div>
 
+</div>
+
+<div class="places-container">
     <div ng-model="$ctrl.places" ui-sortable="$ctrl.options">
 
-        <div class="places-container" ng-repeat="place in $ctrl.places">
-            <div class="card red darken-4">
+        <div ng-repeat="place in $ctrl.places">
+            <div class="card" ng-click="$ctrl.setCurrentDragging(place)">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator card-img" src="{{place.image_url}}">
                 </div>
@@ -44,9 +71,5 @@
                 </div>
             </div>
         </div>
-        <div class="polls-container">
-
-        </div>
-
-
+    </div>
 </div>
