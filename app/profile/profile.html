@@ -1,8 +1,15 @@
 <h1>Profile</h1>
 
-<div class="container" ng-model="user in $ctrl.users">
-  <p>{{user.first_name}}</p>
-  <p>{{user.last_name}}</p>
-  <p>{{user.email}}</p>
-  <p>{{user.company}}</p>
+<div class="container" ng-repeat="user in $ctrl.users">
+  <div>
+    <p>Name: {{user.first_name}} {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Company: {{user.company}}</p>
+  </div>
+  <div>
+    <h2>Past Polls</h2>
+    <p>{{user.title}}</p>
+
+  </div>
+
 </div>
