@@ -11,69 +11,59 @@ main {
 }
 
 nav {
-  background-color: #9C3922 !important;
-  height: 13vh !important;
+    background-color: #9C3922 !important;
+    height: 13vh !important;
 }
 
 .nav-wrapper {
-  padding: 0 2em;
+    padding: 0 2em;
 }
 
 .logo {
-  width: 75px;
-  margin-top: .2em;
+    width: 75px;
+    margin-top: .2em;
 }
 
 .opaque-bg {
-  color: #fff;
-  background-color: rgba(183, 28, 28, 0.65) !important;
-  opacity: .7;
+    color: #fff;
+    background-color: rgba(183, 28, 28, 0.65) !important;
+    opacity: .7;
 }
 
 .places-polls {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
 
 .places-container {
     display: inline-block;
     float: left;
     width: 40vw;
-    padding-right: 5em;
     margin: 0 5em;
 }
 
 .polls-container {
-  display: inline-block;
-  float: right;
-  width: 40vw;
-  padding-left: 5em;
-  margin: 0 5em;
+    display: inline-block;
+    float: right;
+    width: 40vw;
+    margin: 0 5em;
 }
 
 .dropzone {
-  background-color: pink;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  float: right;
-  padding: 14px;
-  border: 2px dashed grey
-  color: grey;
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    float: right;
+    color: grey;
 }
 
 .dropzone:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.noFields {
-  padding: 14px;
-  border: 2px dashed grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 a {
@@ -86,40 +76,41 @@ a {
 }
 
 .hero {
-  width: 115vw;
+    width: 80vw;
 }
 
 .home-text {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
 }
 
 .poll-button {
-  background-color: #C6720B;
+    background-color: #C6720B;
 }
 
 .poll-button:hover {
-    background-color: rgba(255, 110, 64, 0.8);
+    opacity: 0.8;
+    background-color: #C6720B !important;
 }
 
 .valign-wrapper {
     display: block !important;
     display: -ms-flexbox;
-    /* display: flex; */
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
 }
 
 h2 span {
-   color: white;
-   /*font: bold 24px/45px;*/
-   letter-spacing: 1px;
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.6);
-   padding: 10px;
+    color: white;
+    /*font: bold 24px/45px;*/
+    letter-spacing: 1px;
+    background: rgb(0, 0, 0);
+    /* fallback color */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
 }
 
 .hero-block {
@@ -127,53 +118,47 @@ h2 span {
 }
 
 .instruction {
-  width: 20vw;
+    width: 20vw;
 }
 
 .parallax img {
-  display: block;
-  opacity: .7;
+    display: block;
+    /*opacity: .7;*/
 }
 
 .parallax-container {
-  position: relative;
-  overflow: hidden;
-  height: 75vh;
-  background-size: cover;
-}
-
-.add-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 3em;
+    position: relative;
+    overflow: hidden;
+    height: 75vh;
+    background-size: cover;
 }
 
 .select-rest {
-  display: inline-block;
-  float: left;
-  width: 45vw;
-  text-align: center;
+    display: inline-block;
+    float: left;
+    width: 50vw;
+    text-align: center;
 }
 
 .poll-rest {
-  display: inline-block;
-  float: right;
-  width: 40vw;
-  text-align: center;
+    display: inline-block;
+    float: right;
+    width: 50vw;
+    text-align: center;
 }
 
 .card {
-  background-color: #968F76 !important;
+    background-color: #968F76 !important;
 }
 
 .signup {
-  width: 50vw;
+    width: 50vw;
 }
 
 .login {
-  width: 50vw;
+    width: 50vw;
 }
 
 footer {
-  background-color: #9C3922 !important;
+    background-color: #9C3922 !important;
 }

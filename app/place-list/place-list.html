@@ -18,9 +18,9 @@
 <header class="poll-rest">
     <h2>Drag selections here</h2>
 </header>
+
 <div class="polls-container">
-    <div ng-show="dragging" class="dropzone" ui-sortable="dropzone" ng-model="dropzoneFields">
-        <p>This is text</p>
+    <div ng-show="dragging" class="dropzone" ui-sortable="$ctrl.options" ng-model="dropzoneFields">
 
     </div>
     <div ng-repeat="item in dropzoneFields track by $index">
@@ -47,7 +47,7 @@
 </div>
 
 <div class="places-container">
-    <div ng-model="$ctrl.places" ui-sortable="$ctrl.options">
+    <div ng-model="$ctrl.places" ui-sortable="$ctrl.draggable" class="place-list">
 
         <div ng-repeat="place in $ctrl.places">
             <div class="card" ng-click="$ctrl.setCurrentDragging(place)">
