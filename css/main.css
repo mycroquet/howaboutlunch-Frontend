@@ -2,7 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
     background-color: #E7E7D5;
 }
 
@@ -24,16 +25,44 @@ nav {
     margin-top: .2em;
 }
 
+.site-name{
+  color: #E7E7D5;
+  font-family: 'Shojumaru', cursive;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+
+}
+
+.page-title h2 {
+  margin-left: 3em;
+}
+
 .opaque-bg {
     color: #fff;
     background-color: rgba(183, 28, 28, 0.65) !important;
     opacity: .7;
 }
 
+.poll-submit {
+  margin: 2.6em 1em 0 0;
+  background-color: #C6720B;
+}
+
+.poll-submit:hover {
+    opacity: 0.8;
+    background-color: #C6720B !important;
+}
+
 .places-polls {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    margin-top: 5em;
 }
 
 .places-container {
@@ -67,12 +96,17 @@ nav {
 }
 
 a {
-    color: #fff;
+    color: #9C3922;
 }
 
 .card-img {
     object-fit: cover;
     height: 250px;
+}
+
+.places-container a {
+  color: #9C3922;
+  font-weight: bold;
 }
 
 .hero {
@@ -87,10 +121,10 @@ a {
 }
 
 .poll-button {
-    background-color: #C6720B;
+    background-color: #C6720B !important;
 }
 
-.poll-button:hover {
+.poll-button:hover{
     opacity: 0.8;
     background-color: #C6720B !important;
 }
@@ -103,15 +137,6 @@ a {
     align-items: center;
 }
 
-h2 span {
-    color: white;
-    /*font: bold 24px/45px;*/
-    letter-spacing: 1px;
-    background: rgb(0, 0, 0);
-    /* fallback color */
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-}
 
 .hero-block {
     padding-top: 10%;
@@ -119,6 +144,11 @@ h2 span {
 
 .instruction {
     width: 20vw;
+    font-size: 1.2em;
+}
+
+.instruction a {
+  color: #000;
 }
 
 .parallax img {
@@ -145,6 +175,16 @@ h2 span {
     float: right;
     width: 50vw;
     text-align: center;
+}
+
+h2 span {
+    color: white;
+    /*font: bold 24px/45px;*/
+    letter-spacing: 1px;
+    background: rgb(0, 0, 0);
+    /* fallback color */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
 }
 
 .card {

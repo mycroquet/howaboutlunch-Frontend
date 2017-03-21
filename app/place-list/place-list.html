@@ -11,65 +11,62 @@
         </div>
     </div>
 </div> -->
-
-<header class="select-rest">
-    <h2>Select Your Restaurants</h2>
-</header>
-<header class="poll-rest">
-    <h2>Drag selections here</h2>
-</header>
-
-<div class="polls-container">
-    <div ng-show="dragging" class="dropzone" ui-sortable="$ctrl.options" ng-model="dropzoneFields">
-
-    </div>
-    <div ng-repeat="item in dropzoneFields track by $index">
-      <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator card-img" src="{{item.image_url}}">
-          </div>
-          <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">{{item.name}}<i class="material-icons right">more_vert</i></span>
-              <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
-          </div>
-          <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">{{item.name}}<i class="material-icons right">close</i></span>
-              <p>{{item.location.display_address}}</p>
-              <p><a href="tel:{{item.phone}}">Call Now</a></p>
-              <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
-              <p>Rating: {{item.rating}}</p>
-              <p>{{item.price}}</p>
-              <p>{{item.distance}} meters</p>
-          </div>
-      </div>
-    </div>
-
+<div class="page-title" >
+        <h2>Do Some Research</h2>
+        <h2>Build Your Poll</h2>
+        <button class="btn-large poll-submit" ng-click="$ctrl.pollSubmit()">Save Poll
+    </button>
 </div>
 
-<div class="places-container">
-    <div ng-model="$ctrl.places" ui-sortable="$ctrl.draggable" class="place-list">
+    <div class="polls-container">
+        <div ng-show="dragging" class="dropzone" ui-sortable="$ctrl.options" ng-model="dropzoneFields">
 
-        <div ng-repeat="place in $ctrl.places">
-            <div class="card" ng-click="$ctrl.setCurrentDragging(place)">
+        </div>
+        <div ng-repeat="item in dropzoneFields track by $index">
+            <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator card-img" src="{{place.image_url}}">
+                    <img class="activator card-img" src="{{item.image_url}}">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">{{place.name}}<i class="material-icons right">more_vert</i></span>
-                    <p><a href="{{place.url}}" target="_blank">Visit Site</a></p>
+                    <span class="card-title activator grey-text text-darken-4">{{item.name}}<i class="material-icons right">more_vert</i></span>
+                    <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">{{place.name}}<i class="material-icons right">close</i></span>
-                    <p>{{place.location.display_address}}</p>
-                    <p><a href="tel:{{place.phone}}">Call Now</a></p>
-                    <p><a href="{{place.url}}" target="_blank">Visit Site</a></p>
-                    <p>Rating: {{place.rating}}</p>
-                    <p>{{place.price}}</p>
-                    <p>{{place.distance}} meters</p>
+                    <span class="card-title grey-text text-darken-4">{{item.name}}<i class="material-icons right">close</i></span>
+                    <p>{{item.location.address1}}, {{item.location.city}}, {{item.location.state}}, {{item.location.zip_code}}</p>
+                    <p>Price Level: {{item.price}}</p>
+                    <p>Rating: {{item.rating}}</p>
+                    <p><a href="tel:{{item.phone}}">Call Now</a></p>
+                    <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
+                    <p>{{item.distance}} meters</p>
+                </div>
+            </div>
+        </div>
 
+    </div>
 
+    <div class="places-container">
+        <div ng-model="$ctrl.places" ui-sortable="$ctrl.draggable" class="place-list">
+
+            <div ng-repeat="place in $ctrl.places">
+                <div class="card" ng-click="$ctrl.setCurrentDragging(place)">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator card-img" src="{{place.image_url}}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{place.name}}<i class="material-icons right">more_vert</i></span>
+                        <p><a href="{{place.url}}" target="_blank">Visit Site</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{place.name}}<i class="material-icons right">close</i></span>
+                        <p>{{place.location.address1}}, {{place.location.city}}, {{place.location.state}}, {{place.location.zip_code}}</p>
+                        <p>Price Level: {{place.price}}</p>
+                        <p>Rating: {{place.rating}}</p>
+                        <p><a href="tel:{{place.phone}}">Call Now</a></p>
+                        <p><a href="{{place.url}}" target="_blank">Visit Site</a></p>
+                        <p>{{place.distance}} meters</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
