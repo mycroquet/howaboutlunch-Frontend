@@ -33,6 +33,11 @@
                 url: '/placeList',
                 component: 'placeList'
             })
+            .state({
+              name: 'poll',
+              url: '/poll/{poll_url}',
+              component: 'polls'
+            })
 
 
         $urlRouterProvider.otherwise('/')

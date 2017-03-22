@@ -12,7 +12,7 @@
             const vm = this
 
             vm.$onInit = function() {
-                $http.get('http://localhost:4000/places?latitude=39.7639175&longitude=-105.0178755&term=food')
+                $http.get('https://howaboutlunch.herokuapp.com/places?latitude=39.7639175&longitude=-105.0178755&term=food')
                     .then(function(response) {
                         vm.places = response.data.businesses
                         console.log(response.data.businesses);
@@ -23,22 +23,21 @@
         vm.pollSubmit = function(places) {
           console.log('click');
             var pollInfo = {
-                title: 'Default' + ' ' + new Date(),
+                title: 'Default Title' + ' ' + new Date(),
                 enabled: true,
                 places: $scope.dropzoneFields.map(function (place) {
                   return {
                     place_id: place.id,
-                    name: place.name
+                    name: place.name,
+                    votes: 0
                   }
                 })
             }
-            console.log(pollInfo);
-            // $http.post('http://localhost:4000/poll', pollInfo)
-            //     .then(function(result) {
-            //         console.log(pollInfo);
-            //
-            //         $state.go('profile')
-            //     })
+            $http.post('https://howaboutlunch.herokuapp.com/poll', pollInfo)
+                .then(function(result) {
+                    console.log(pollInfo);
+
+                })
         };
 
         $scope.dropzoneFields = []

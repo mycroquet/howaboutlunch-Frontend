@@ -16,7 +16,7 @@
 
         }
         vm.formSubmit = function() {
-            $http.post('http://localhost:4000/login')
+            $http.post('https://howaboutlunch.herokuapp.com/login')
                 .then(function(result) {
                     vm.submit = formSubmit()
                     console.log(vm.user.email);

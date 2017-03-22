@@ -9,7 +9,7 @@
     signupController.$inject = ['$http']
 
     function signupController($http) {
-        const ENDPOINT = 'http://localhost:4000/users/signup'
+        const ENDPOINT = 'https://howaboutlunch.herokuapp.com/users/signup'
         const vm = this
 
         vm.$onInit = function() {
