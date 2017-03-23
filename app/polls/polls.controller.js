@@ -8,7 +8,7 @@
     function PollController($http){
       const vm = this
       const serverUrl = window.location.hostname == 'localhost' ? 'http://localhost:4000/' : 'https://howaboutlunch.herokuapp.com/'
-      vm.pollUrl = window.location.hostname == 'localhost' ? 'http://localhost:3000/#!/' : 'https://howboutlunch-a8532.firebaseapp.com/#!/poll/'
+      vm.pollUrl = window.location.hostname == 'localhost' ? 'http://localhost:3000/#!/' : 'https://howboutlunch-a8532.firebaseapp.com/#!/'
 
 
       vm.$onInit = function() {
