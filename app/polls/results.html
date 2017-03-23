@@ -1,6 +1,6 @@
 <h1>The Results are in!</h1>
 
-<div class="container results" ng-repeat="vote in $ctrl.votes">
-  <p>{{vote.name}}</p>
-  <p>{{vote.votes}}</p>
+<div class="container results" ng-repeat="result in $ctrl.results" ng-model="$ctrl.selectedplace">
+  <p>{{result.name}}</p>
+  <p>{{result.votes}}</p>
 </div>

@@ -4,12 +4,12 @@
 
 
 <div class="container">
-    <form>
+    <form ng-submit="$ctrl.castVote()">
         <p ng-repeat="poll in $ctrl.polls">
-            <input name="pollGroup" type="radio" id="{{poll.name}}" />
+            <input name="pollGroup" type="radio" ng-model="$ctrl.selectedplace" value="{{poll.id}}" id="{{poll.name}}" />
             <label for="{{poll.name}}">{{poll.name}}</label>
         </p>
-        <a class="vote btn" ui-sref="results">Vote</a>
+        <button type="submit" class="vote btn">Vote</button>
     </form>
 
 </div>

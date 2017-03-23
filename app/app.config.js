@@ -35,12 +35,12 @@
             })
             .state({
               name: 'poll',
-              url: '/poll/:pollid',
+              url: '/poll/:id',
               component: 'polls'
             })
             .state({
               name: 'results',
-              url: '/results',
+              url: '/results/:poll_url',
               component: 'results'
             })
 
