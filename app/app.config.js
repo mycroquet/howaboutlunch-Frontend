@@ -39,9 +39,9 @@
               component: 'polls'
             })
             .state({
-              name: 'ballot',
-              url: '{{poll_url}}',
-              component: 'ballot'
+              name: 'results',
+              url: '/results',
+              component: 'results'
             })
 
 

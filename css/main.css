@@ -25,6 +25,12 @@ nav {
     margin-top: .2em;
 }
 
+.results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .site-name{
   color: #E7E7D5;
   font-family: 'Shojumaru', cursive;
@@ -85,6 +91,20 @@ nav {
     flex-direction: column;
     align-self: center;
     padding: 2em;
+}
+
+.vote {
+  background-color: #C6720B !important;
+}
+
+.vote:hover {
+  background-color: #C6720B !important;
+  opacity: 0.8;
+}
+
+.poll-header {
+    display: flex;
+
 }
 
 .ballot {

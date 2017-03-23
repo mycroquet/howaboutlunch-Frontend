@@ -1,14 +1,15 @@
-<h1>Send Your Poll</h1>
+<header class="poll-header">
+    <h1>Cast Your Vote!</h1>
+</header>
 
-<div class="container" ng-repeat="poll in $ctrl.polls">
-  <div>
-    <p>{{poll.title}}</p>
-    <p>{{poll.name}}</p>
 
-  </div>
-  <div>
-    <p>{{poll.poll_url}}</p>
-
-  </div>
+<div class="container">
+    <form>
+        <p ng-repeat="poll in $ctrl.polls">
+            <input name="pollGroup" type="radio" id="{{poll.name}}" />
+            <label for="{{poll.name}}">{{poll.name}}</label>
+        </p>
+        <a class="vote btn" ui-sref="results">Vote</a>
+    </form>
 
 </div>

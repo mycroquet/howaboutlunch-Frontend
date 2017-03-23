@@ -17,12 +17,7 @@
 
             })
 
-            vm.castVote = function() {
-                var voteInfo = {
-                  name: vm.ballots.name,
-                  votes: vm.ballots.votes
-                }
-            }
+          
 
 
       }
