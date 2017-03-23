@@ -1,1 +1,14 @@
-<h1>Step Two: Create Your Poll!</h1>
+<h1>Send Your Poll</h1>
+
+<div class="container" ng-repeat="poll in $ctrl.polls">
+  <div>
+    <p>{{poll.title}}</p>
+    <p>{{poll.name}}</p>
+
+  </div>
+  <div>
+    <p>{{poll.poll_url}}</p>
+
+  </div>
+
+</div>

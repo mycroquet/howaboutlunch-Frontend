@@ -1,42 +1,45 @@
 (function() {
-        'use strict'
+    'use strict'
 
 
-        angular
-            .module('howaboutlunch')
-            .controller('placeListController', placeListController)
+    angular
+        .module('howaboutlunch')
+        .controller('placeListController', placeListController)
 
-        placeListController.$inject = ['$http', '$scope']
+    placeListController.$inject = ['$http', '$scope']
 
-        function placeListController($http, $scope) {
-            const vm = this
+    function placeListController($http, $scope) {
+        const vm = this
+        const serverUrl = window.location.hostname == 'localhost' ? 'http://localhost:4000/' : 'https://howaboutlunch.herokuapp.com/'
+        vm.pollUrl = window.location.hostname == 'localhost' ? 'http://localhost:3000/#!/poll/' : 'https://howboutlunch-a8532.firebaseapp.com/#!/poll/'
 
-            vm.$onInit = function() {
-                $http.get('https://howaboutlunch.herokuapp.com/places?latitude=39.7639175&longitude=-105.0178755&term=food')
-                    .then(function(response) {
-                        vm.places = response.data.businesses
-                        console.log(response.data.businesses);
-                    })
+        vm.$onInit = function() {
+            $http.get(serverUrl + 'places?latitude=39.734086&longitude=-104.992218&term=food')
+                .then(function(response) {
+                    vm.places = response.data.businesses
+                    console.log(response.data.businesses);
+                })
 
 
         }
         vm.pollSubmit = function(places) {
-          console.log('click');
+            console.log('click');
             var pollInfo = {
-                title: 'Default Title' + ' ' + new Date(),
+                title: 'Default Title:' + ' ' + new Date(),
                 enabled: true,
-                places: $scope.dropzoneFields.map(function (place) {
-                  return {
-                    place_id: place.id,
-                    name: place.name,
-                    votes: 0
-                  }
+                places: $scope.dropzoneFields.map(function(place) {
+                    return {
+                        place_id: place.id,
+                        name: place.name,
+                        votes: 0
+                    }
                 })
             }
-            $http.post('https://howaboutlunch.herokuapp.com/poll', pollInfo)
+            $http.post(serverUrl + 'poll', pollInfo)
                 .then(function(result) {
-                    console.log(pollInfo);
-
+                    console.log(result.data.poll_url);
+                    vm.pollCreated = true
+                    vm.poll = result.data
                 })
         };
 

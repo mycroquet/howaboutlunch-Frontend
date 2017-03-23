@@ -1,0 +1,13 @@
+<h1>Cast your vote</h1>
+
+<div class="container ballot">
+    <form class="col s12" ng-submit="$ctrl.castVote()">
+        <p ng-repeat="ballot in $ctrl.ballots">
+            <input name="ballot" type="radio" id="{{poll.name}}" />
+            <label for="{{poll.name}}">{{poll.name}}</label>
+        </p>
+        <button class="btn waves-effect waves-light" type="submit" id="submit" ng-click="$ctrl.ballotController()">Cast Vote
+<i class="material-icons right">send</i>
+</button>
+    </form>
+</div>

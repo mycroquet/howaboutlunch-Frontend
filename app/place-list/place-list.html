@@ -11,13 +11,38 @@
         </div>
     </div>
 </div> -->
-<div class="page-title" >
-        <h2>Do Some Research</h2>
-        <h2>Build Your Poll</h2>
-        <button class="btn-large poll-submit" ng-click="$ctrl.pollSubmit()">Save Poll
+<div class="page-title">
+    <h2>Do Some Research</h2>
+    <h2>Build Your Poll</h2>
+    <button class="btn-large poll-submit" ng-click="$ctrl.pollSubmit()">Save Poll
     </button>
 </div>
 
+<!-- <div class="">
+  <input id="foo" value="{{$ctrl.pollUrl}}{{$ctrl.poll.poll_url}}"> -->
+
+<!-- Trigger -->
+<!-- <button class="btn" data-clipboard-target="#foo">
+    <img src="assets/clippy.svg" alt="Copy to clipboard">
+</button>
+</div> -->
+
+<div ng-show="$ctrl.pollCreated" class="poll-url">
+  <h2>Share this URL!</h2>
+ <p><a ng-href="{{$ctrl.pollUrl}}{{$ctrl.poll.poll_url}}">{{$ctrl.pollUrl}}{{$ctrl.poll.poll_url}}</a></p>
+</div>
+<!-- <div class="container">
+  <div class="row poll-url" ng-show="$ctrl.pollCreated">
+      <div class="col s12 m5">
+          <div class="card-panel">
+              <p><a ng-href="{{$ctrl.pollUrl}}{{$ctrl.poll.poll_url}}">{{$ctrl.pollUrl}}{{$ctrl.poll.poll_url}}</a></p>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+<div ng-show="!$ctrl.pollCreated">
     <div class="polls-container">
         <div ng-show="dragging" class="dropzone" ui-sortable="$ctrl.options" ng-model="dropzoneFields">
 
@@ -70,3 +95,4 @@
             </div>
         </div>
     </div>
+</div>
