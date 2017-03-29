@@ -14,12 +14,21 @@
         vm.pollUrl = window.location.hostname == 'localhost' ? 'http://localhost:3000/#!/poll/' : 'https://howboutlunch-a8532.firebaseapp.com/#!/poll/'
 
         vm.$onInit = function() {
-            $http.get(serverUrl + 'places?latitude=39.734086&longitude=-104.992218&term=food')
-                .then(function(response) {
-                    vm.places = response.data.businesses
-                    console.log(response.data.businesses);
-                })
 
+            navigator.geolocation.getCurrentPosition(function(position) {
+              console.log(position);
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                }
+
+
+                $http.get(serverUrl + 'places?' + `latitude=${pos.lat}&longitude=${pos.lng}&term=food`)
+                    .then(function(response) {
+                        vm.places = response.data.businesses
+                        console.log(response.data.businesses);
+                    })
+            });
 
         }
         vm.pollSubmit = function(places) {
