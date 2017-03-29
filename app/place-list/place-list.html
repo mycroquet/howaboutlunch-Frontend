@@ -1,16 +1,3 @@
-<!-- <div class="preloader-wrapper active">
-    <div class="spinner-layer spinner-red-only">
-        <div class="circle-clipper left">
-            <div class="circle"></div>
-        </div>
-        <div class="gap-patch">
-            <div class="circle"></div>
-        </div>
-        <div class="circle-clipper right">
-            <div class="circle"></div>
-        </div>
-    </div>
-</div> -->
 <div class="page-title">
     <h2>Do Some Research</h2>
     <h2>Build Your Poll</h2>
@@ -44,6 +31,20 @@
 
 <div ng-show="!$ctrl.pollCreated">
     <div class="polls-container">
+
+      <div ng-show ="$ctrl.loading" class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper left">
+                  <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                  <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                  <div class="circle"></div>
+              </div>
+          </div>
+      </div>
         <div ng-show="dragging" class="dropzone" ui-sortable="$ctrl.options" ng-model="dropzoneFields">
 
         </div>
@@ -63,7 +64,7 @@
                     <p>Rating: {{item.rating}}</p>
                     <p><a href="tel:{{item.phone}}">Call Now</a></p>
                     <p><a href="{{item.url}}" target="_blank">Visit Site</a></p>
-                    <p>{{item.distance}} meters</p>
+                    <p>{{$ctrl.getMiles(item.distance)}} miles</p>
                 </div>
             </div>
         </div>
@@ -89,7 +90,7 @@
                         <p>Rating: {{place.rating}}</p>
                         <p><a href="tel:{{place.phone}}">Call Now</a></p>
                         <p><a href="{{place.url}}" target="_blank">Visit Site</a></p>
-                        <p>{{place.distance}} meters</p>
+                        <p>{{$ctrl.getMiles(place.distance)}} miles</p>
                     </div>
                 </div>
             </div>
